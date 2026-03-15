@@ -16,6 +16,19 @@ export default function SubirFactura() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [whatsappUrl, setWhatsappUrl] = useState('https://wa.me/34610764494?text=Hola%20LuzIA!%20Quiero%20ver%20el%20mejor%20precio%20para%20mi%20factura%20de%20luz.%20Inf%C3%B3rmame%20por%20favor');
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const refParam = urlParams.get('ref');
+
+    if (refParam) {
+      const baseMessage = 'Hola LuzIA! Quiero ver el mejor precio para mi factura de luz. Infórmame por favor';
+      const fullMessage = `${baseMessage}. Vengo de parte de ${refParam.toUpperCase()}`;
+      const encodedMessage = encodeURIComponent(fullMessage);
+      setWhatsappUrl(`https://wa.me/34610764494?text=${encodedMessage}`);
+    }
+  }, []);
 
   useEffect(() => {
     const calculateTimeLeft = () => {
@@ -495,7 +508,7 @@ export default function SubirFactura() {
 
                     {/* WhatsApp Button */}
                     <a
-                      href="https://wa.me/34610764494?text=Hola%20LuzIA!%20Quiero%20ver%20el%20mejor%20precio%20para%20mi%20factura%20de%20luz.%20Inf%C3%B3rmame%20por%20favor"
+                      href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group/btn relative inline-flex items-center gap-4 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white px-12 py-6 rounded-full text-2xl font-black hover:shadow-2xl hover:shadow-[#25D366]/60 transition-all duration-300 transform hover:scale-110 overflow-hidden"
@@ -958,7 +971,7 @@ export default function SubirFactura() {
             </p>
 
             <a
-              href="https://wa.me/34610764494?text=Hola%20LuzIA!%20Quiero%20ver%20el%20mejor%20precio%20para%20mi%20factura%20de%20luz.%20Inf%C3%B3rmame%20por%20favor"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white px-12 py-6 rounded-full text-2xl font-black hover:shadow-2xl hover:shadow-[#25D366]/50 transition-all duration-300 transform hover:scale-110 relative overflow-hidden"
