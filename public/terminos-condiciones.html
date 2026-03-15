@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - Energía Verde Wasabi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.7;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .legal-document {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2b6cb0 0%, #3182ce 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .content {
+            padding: 50px;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #A8FF00 0%, #96E600 100%);
+            color: #1a1a1a;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(168, 255, 0, 0.3);
+        }
+        
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(168, 255, 0, 0.4);
+        }
+        
+        .back-link::before {
+            content: '←';
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        h2 {
+            color: #1a1a1a;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3182ce;
+            position: relative;
+        }
+        
+        h3 {
+            color: #2d3748;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 30px 0 15px 0;
+        }
+        
+        h4 {
+            color: #4a5568;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(49, 130, 206, 0.2);
+        }
+        
+        .info-box {
+            background: #ebf8ff;
+            border-left: 5px solid #3182ce;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 15px 15px 0;
+        }
+        
+        .warning-box {
+            background: #fef5e7;
+            border-left: 5px solid #f6ad55;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 15px 15px 0;
+        }
+        
+        .success-box {
+            background: #f0fff4;
+            border-left: 5px solid #48bb78;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 15px 15px 0;
+        }
+        
+        .company-info {
+            background: linear-gradient(135deg, #A8FF00 0%, #96E600 100%);
+            color: #1a1a1a;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            font-weight: 600;
+        }
+        
+        .company-info h3 {
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        
+        .date-updated {
+            background: #e2e8f0;
+            color: #4a5568;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .footer-nav {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #e2e8f0;
+        }
+        
+        .footer-nav a {
+            display: inline-block;
+            background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(49, 130, 206, 0.3);
+        }
+        
+        .service-section {
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .price-table th {
+            background: #3182ce;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 700;
+        }
+        
+        .price-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .price-table tr:hover {
+            background: #f7fafc;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .content {
+                padding: 30px 25px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .price-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="legal-document">
+            <div class="header">
+                <h1>Términos y Condiciones</h1>
+                <div class="subtitle">Condiciones Generales de Contratación de Servicios Energéticos</div>
+            </div>
+            
+            <div class="content">
+                <a href="/" class="back-link">Volver a la web principal</a>
+                
+                <div class="date-updated">
+                    <strong>Última actualización:</strong> 1 de enero de 2025
+                </div>
+
+                <div class="highlight-box">
+                    <strong>📋 Condiciones contractuales</strong> que regulan la prestación de servicios de suministro energético por parte de Energía Verde Wasabi SL.
+                </div>
+
+                <h2>1. Información General de la Empresa</h2>
+                <div class="company-info">
+                    <h3>⚡ Energía Verde Wasabi SL</h3>
+                    <p><strong>CIF:</strong> B42709378</p>
+                    <p><strong>Domicilio Social:</strong> POLÍGONO CAMPOLLANO - CALLE A, 7. 02006, ALBACETE (ALBACETE), ESPAÑA</p>
+                    <p><strong>Teléfono de Atención al Cliente:</strong> +34 621 50 83 00</p>
+                    <p><strong>Email:</strong> info@wasabitrader.com</p>
+                    <p><strong>Horario de Atención:</strong> Lunes a Viernes, 9:00 - 18:00</p>
+                    <p><strong>Registro Mercantil:</strong> Inscrita en el Registro Mercantil de Albacete</p>
+                    <p><strong>Autorización CNMC:</strong> Comercializadora autorizada</p>
+                </div>
+
+                <h2>2. Objeto y Ámbito de Aplicación</h2>
+                <p>Los presentes Términos y Condiciones regulan la relación contractual entre Energía Verde Wasabi SL (en adelante, "la Empresa") y sus clientes para la prestación de servicios de suministro energético.</p>
+
+                <div class="service-section">
+                    <h3>2.1 Servicios Ofrecidos</h3>
+                    <ul>
+                        <li><strong>⚡ Suministro de Energía Eléctrica:</strong> 100% renovable con garantía de origen</li>
+                        <li><strong>🔥 Suministro de Gas Natural:</strong> Para uso doméstico y comercial</li>
+                        <li><strong>📊 Gestión Integral:</strong> Facturación, atención al cliente y gestión de contratos</li>
+                        <li><strong>🔄 Cambio de Comercializadora:</strong> Gestión completa del proceso</li>
+                        <li><strong>📞 Atención al Cliente:</strong> Soporte técnico y comercial</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3>2.2 Ámbito Territorial</h3>
+                    <p>Nuestros servicios están disponibles en todo el territorio español peninsular, Islas Baleares, Islas Canarias, Ceuta y Melilla, sujeto a la disponibilidad de las redes de distribución correspondientes.</p>
+                </div>
+
+                <h2>3. Condiciones de Contratación</h2>
+                
+                <h3>3.1 Modalidades de Contratación</h3>
+                <div class="info-box">
+                    <p><strong>Puedes contratar nuestros servicios a través de:</strong></p>
+                    <ul>
+                        <li><strong>🌐 Formulario web:</strong> Con posterior confirmación telefónica</li>
+                        <li><strong>📞 Llamada telefónica:</strong> Con grabación de la conversación</li>
+                        <li><strong>✍️ Contrato digital:</strong> Firmado electrónicamente</li>
+                        <li><strong>🏠 Visita comercial:</strong> En tu domicilio o empresa</li>
+                        <li><strong>📧 Email:</strong> Intercambio de documentación</li>
+                    </ul>
+                </div>
+
+                <h3>3.2 Documentación Necesaria</h3>
+                <p>Para la contratación de nuestros servicios necesitarás proporcionar:</p>
+                <ul>
+                    <li>DNI/NIE del titular del contrato</li>
+                    <li>Última factura de luz y/o gas (para identificar el punto de suministro)</li>
+                    <li>Datos bancarios para domiciliación (IBAN)</li>
+                    <li>Datos de contacto actualizados</li>
+                    <li>Autorización para el cambio de comercializadora</li>
+                </ul>
+
+                <h3>3.3 Verificación y Confirmación</h3>
+                <div class="warning-box">
+                    <p><strong>⚠️ Proceso de verificación:</strong> Todos los contratos están sujetos a un proceso de verificación que incluye:</p>
+                    <ul>
+                        <li>Confirmación telefónica de los datos</li>
+                        <li>Verificación de la titularidad del suministro</li>
+                        <li>Comprobación de la viabilidad técnica</li>
+                        <li>Validación de la documentación aportada</li>
+                    </ul>
+                </div>
+
+                <h2>4. Precios y Condiciones Económicas</h2>
+                
+                <h3>4.1 Estructura de Precios</h3>
+                <p>Nuestros precios se estructuran de la siguiente manera:</p>
+
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Descripción</th>
+                            <th>Aplicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Término de Energía</strong></td>
+                            <td>Precio por kWh consumido</td>
+                            <td>Según consumo real</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Término de Potencia</strong></td>
+                            <td>Precio por kW contratado</td>
+                            <td>Fijo mensual</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Impuestos</strong></td>
+                            <td>IVA y otros impuestos</td>
+                            <td>Según normativa fiscal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Peajes y Cargos</strong></td>
+                            <td>Regulados por la CNMC</td>
+                            <td>Según normativa</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>4.2 Modalidades de Precio</h3>
+                <div class="service-section">
+                    <h4>4.2.1 Precios Indexados</h4>
+                    <ul>
+                        <li>Vinculados al mercado mayorista de electricidad</li>
+                        <li>Actualizados según el precio del pool eléctrico</li>
+                        <li>Máxima transparencia en la formación del precio</li>
+                        <li>Sin sorpresas: pagas el precio real de la energía</li>
+                    </ul>
+
+                    <h4>4.2.2 Precios Fijos</h4>
+                    <ul>
+                        <li>Precio estable durante el período acordado</li>
+                        <li>Protección frente a volatilidad del mercado</li>
+                        <li>Facilita la planificación del gasto energético</li>
+                        <li>Condiciones específicas según contrato</li>
+                    </ul>
+                </div>
+
+                <h3>4.3 Ofertas y Promociones</h3>
+                <div class="success-box">
+                    <p><strong>🎁 Incentivos por contratación:</strong></p>
+                    <ul>
+                        <li><strong>30% descuento</strong> por contratar suministro eléctrico</li>
+                        <li><strong>30% descuento</strong> por contratar suministro de gas</li>
+                        <li><strong>30% descuento</strong> para pymes en consumo</li>
+                        <li>Condiciones especiales para grandes consumidores</li>
+                    </ul>
+                    <p><em>* Ofertas sujetas a condiciones específicas y disponibilidad</em></p>
+                </div>
+
+                <h2>5. Facturación y Pago</h2>
+                
+                <h3>5.1 Ciclo de Facturación</h3>
+                <div class="info-box">
+                    <ul>
+                        <li><strong>Periodicidad:</strong> Facturación mensual</li>
+                        <li><strong>Lecturas:</strong> Basadas en lecturas reales o estimadas</li>
+                        <li><strong>Emisión:</strong> Entre los días 1 y 5 de cada mes</li>
+                        <li><strong>Envío:</strong> Por email preferentemente, o correo postal</li>
+                        <li><strong>Detalle:</strong> Desglose completo de todos los conceptos</li>
+                    </ul>
+                </div>
+
+                <h3>5.2 Métodos de Pago</h3>
+                <p>Ofrecemos las siguientes modalidades de pago:</p>
+                <ul>
+                    <li><strong>Domiciliación bancaria (recomendado):</strong> Cargo automático en cuenta</li>
+                    <li><strong>Transferencia bancaria:</strong> Con referencia de factura</li>
+                    <li><strong>Pago online:</strong> A través de nuestra web</li>
+                    <li><strong>Otros métodos:</strong> Consultar disponibilidad</li>
+                </ul>
+
+                <h3>5.3 Plazos de Pago</h3>
+                <div class="warning-box">
+                    <p><strong>⏰ Condiciones de pago:</strong></p>
+                    <ul>
+                        <li><strong>Plazo:</strong> 20 días naturales desde la emisión de la factura</li>
+                        <li><strong>Retraso:</strong> Intereses de demora según normativa vigente</li>
+                        <li><strong>Impago:</strong> Posible suspensión del suministro tras notificación</li>
+                        <li><strong>Fraccionamiento:</strong> Disponible en casos justificados</li>
+                    </ul>
+                </div>
+
+                <h2>6. Derechos y Obligaciones de las Partes</h2>
+                
+                <h3>6.1 Derechos del Cliente</h3>
+                <div class="success-box">
+                    <p><strong>✅ Como cliente, tienes derecho a:</strong></p>
+                    <ul>
+                        <li>Recibir suministro energético en las condiciones contratadas</li>
+                        <li>Información clara y transparente sobre precios y condiciones</li>
+                        <li>Atención al cliente personalizada y eficiente</li>
+                        <li>Resolución de incidencias en plazos razonables</li>
+                        <li>Cambiar de comercializadora sin penalizaciones</li>
+                        <li>Acceder a mecanismos de resolución de conflictos</li>
+                        <li>Recibir compensaciones por interrupciones del suministro</li>
+                        <li>Solicitar información sobre tu consumo energético</li>
+                    </ul>
+                </div>
+
+                <h3>6.2 Obligaciones del Cliente</h3>
+                <div class="info-box">
+                    <p><strong>📋 Como cliente, te comprometes a:</strong></p>
+                    <ul>
+                        <li>Proporcionar información veraz y actualizada</li>
+                        <li>Permitir el acceso para lecturas y mantenimiento</li>
+                        <li>Pagar las facturas en los plazos establecidos</li>
+                        <li>Comunicar cambios en los datos de contacto</li>
+                        <li>Hacer un uso responsable y eficiente del suministro</li>
+                        <li>Notificar averías o anomalías en el suministro</li>
+                        <li>Cumplir con las normas de seguridad aplicables</li>
+                        <li>Facilitar la gestión de cambio de comercializadora</li>
+                    </ul>
+                </div>
+
+                <h3>6.3 Obligaciones de la Empresa</h3>
+                <div class="highlight-box">
+                    <p><strong>🏢 Energía Verde Wasabi SL se compromete a:</strong></p>
+                    <ul>
+                        <li>Suministrar energía en las condiciones contratadas</li>
+                        <li>Proporcionar información clara sobre precios y condiciones</li>
+                        <li>Gestionar eficientemente el proceso de cambio</li>
+                        <li>Ofrecer atención al cliente de calidad</li>
+                        <li>Resolver incidencias en el menor tiempo posible</li>
+                        <li>Cumplir con toda la normativa sectorial aplicable</li>
+                        <li>Proteger los datos personales conforme al RGPD</li>
+                        <li>Facilitar el ejercicio de los derechos del consumidor</li>
+                    </ul>
+                </div>
+
+                <h2>7. Duración y Resolución del Contrato</h2>
+                
+                <h3>7.1 Duración del Contrato</h3>
+                <p>Los contratos de suministro energético tendrán las siguientes características:</p>
+                <ul>
+                    <li><strong>Duración:</strong> Indefinida, salvo pacto en contrario</li>
+                    <li><strong>Inicio:</strong> Desde la fecha de alta en el sistema</li>
+                    <li><strong>Renovación:</strong> Automática por períodos anuales</li>
+                    <li><strong>Sin permanencia:</strong> Posibilidad de resolución en cualquier momento</li>
+                </ul>
+
+                <h3>7.2 Resolución por el Cliente</h3>
+                <div class="success-box">
+                    <p><strong>✅ Puedes resolver el contrato:</strong></p>
+                    <ul>
+                        <li><strong>En cualquier momento</strong> sin penalizaciones</li>
+                        <li><strong>Con preaviso de 15 días naturales</strong></li>
+                        <li><strong>Mediante comunicación escrita</strong> (email, carta, etc.)</li>
+                        <li><strong>Por teléfono</strong> con confirmación posterior</li>
+                        <li><strong>Contratando con otra comercializadora</strong></li>
+                    </ul>
+                </div>
+
+                <h3>7.3 Resolución por la Empresa</h3>
+                <div class="warning-box">
+                    <p><strong>⚠️ Podemos resolver el contrato en caso de:</strong></p>
+                    <ul>
+                        <li>Impago reiterado de facturas tras requerimiento</li>
+                        <li>Incumplimiento grave de las obligaciones contractuales</li>
+                        <li>Uso fraudulento o manipulación del suministro</li>
+                        <li>Imposibilidad técnica de prestación del servicio</li>
+                        <li>Negativa reiterada a permitir acceso para lecturas</li>
+                        <li>Facilitación de datos falsos o inexactos</li>
+                    </ul>
+                    <p><em>En todos los casos se seguirá el procedimiento legal establecido con notificación previa.</em></p>
+                </div>
+
+                <h2>8. Atención al Cliente y Reclamaciones</h2>
+                
+                <h3>8.1 Canales de Atención</h3>
+                <div class="company-info">
+                    <h3>📞 Contacta con nosotros</h3>
+                    <p><strong>🌐 Web:</strong> wasabienergia.es</p>
+                    <p><strong>📞 Teléfono:</strong> +34 621 50 83 00</p>
+                    <p><strong>📧 Email:</strong> info@wasabitrader.com</p>
+                    <p><strong>💬 WhatsApp:</strong> +34 621 50 83 00</p>
+                    <p><strong>📮 Correo postal:</strong> POLÍGONO CAMPOLLANO - CALLE A, 7. 02006, ALBACETE</p>
+                    <p><strong>🕐 Horario:</strong> Lunes a Viernes, 9:00 - 18:00</p>
+                </div>
+
+                <h3>8.2 Procedimiento de Reclamaciones</h3>
+                <div class="info-box">
+                    <p><strong>📝 Para presentar una reclamación:</strong></p>
+                    <ol>
+                        <li><strong>Primera instancia:</strong> Contactar con nuestro servicio de atención al cliente</li>
+                        <li><strong>Plazo de respuesta:</strong> Máximo 15 días hábiles</li>
+                        <li><strong>Si no hay resolución:</strong> Dirigirse a la CNMC</li>
+                        <li><strong>Arbitraje:</strong> Juntas Arbitrales de Consumo</li>
+                        <li><strong>Vía judicial:</strong> Como último recurso</li>
+                    </ol>
+                </div>
+
+                <h3>8.3 Organismos de Resolución de Conflictos</h3>
+                <ul>
+                    <li><strong>CNMC:</strong> Comisión Nacional de los Mercados y la Competencia</li>
+                    <li><strong>Juntas Arbitrales de Consumo:</strong> Resolución extrajudicial</li>
+                    <li><strong>OMIC:</strong> Oficinas Municipales de Información al Consumidor</li>
+                    <li><strong>Defensor del Pueblo:</strong> Para casos de especial relevancia</li>
+                </ul>
+
+                <h2>9. Protección de Datos y Privacidad</h2>
+                <p>El tratamiento de los datos personales se rige por nuestra <a href="/politica-privacidad.html" style="color: #3182ce; font-weight: bold;">Política de Privacidad</a>, en cumplimiento del Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).</p>
+
+                <div class="info-box">
+                    <h3>🔒 Compromiso de Privacidad</h3>
+                    <ul>
+                        <li>Tratamiento lícito y transparente de datos personales</li>
+                        <li>Medidas de seguridad técnicas y organizativas</li>
+                        <li>Respeto a todos los derechos del interesado</li>
+                        <li>No cesión de datos a terceros sin consentimiento</li>
+                    </ul>
+                </div>
+
+                <h2>10. Fuerza Mayor y Circunstancias Excepcionales</h2>
+                
+                <h3>10.1 Definición de Fuerza Mayor</h3>
+                <p>Se consideran causas de fuerza mayor aquellas circunstancias extraordinarias e imprevisibles que impidan el cumplimiento de las obligaciones contractuales:</p>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ Causas de fuerza mayor:</strong></p>
+                    <ul>
+                        <li>Fenómenos meteorológicos extremos (huracanes, inundaciones, etc.)</li>
+                        <li>Terremotos, incendios y otros desastres naturales</li>
+                        <li>Fallos generalizados en las redes de transporte y distribución</li>
+                        <li>Huelgas generales y conflictos laborales del sector</li>
+                        <li>Decisiones de autoridades competentes</li>
+                        <li>Pandemias o emergencias sanitarias declaradas</li>
+                        <li>Actos de terrorismo o guerra</li>
+                        <li>Ciberataques a infraestructuras críticas</li>
+                    </ul>
+                </div>
+
+                <h3>10.2 Efectos de la Fuerza Mayor</h3>
+                <p>En caso de fuerza mayor:</p>
+                <ul>
+                    <li>Se suspenden temporalmente las obligaciones afectadas</li>
+                    <li>No se aplicarán penalizaciones por incumplimiento</li>
+                    <li>Se informará a los clientes de la situación y medidas adoptadas</li>
+                    <li>Se restablecerá el servicio tan pronto como sea posible</li>
+                </ul>
+
+                <h2>11. Modificaciones de los Términos</h2>
+                
+                <h3>11.1 Derecho de Modificación</h3>
+                <p>Energía Verde Wasabi SL se reserva el derecho a modificar estos términos y condiciones para adaptarlos a:</p>
+                <ul>
+                    <li>Cambios en la legislación sectorial o general</li>
+                    <li>Nuevos servicios o funcionalidades</li>
+                    <li>Mejoras en las condiciones comerciales</li>
+                    <li>Adaptaciones técnicas o operativas</li>
+                    <li>Recomendaciones de organismos reguladores</li>
+                </ul>
+
+                <h3>11.2 Procedimiento de Modificación</h3>
+                <div class="info-box">
+                    <p><strong>📢 Proceso de notificación:</strong></p>
+                    <ul>
+                        <li><strong>Notificación previa:</strong> Mínimo 30 días antes de la entrada en vigor</li>
+                        <li><strong>Medios de comunicación:</strong> Email, carta, web, factura</li>
+                        <li><strong>Derecho de resolución:</strong> Posibilidad de resolver sin penalización</li>
+                        <li><strong>Aceptación tácita:</strong> Continuidad en el servicio implica aceptación</li>
+                    </ul>
+                </div>
+
+                <h2>12. Legislación Aplicable y Jurisdicción</h2>
+                
+                <h3>12.1 Marco Normativo</h3>
+                <p>Estos términos y condiciones se rigen por la legislación española, específicamente:</p>
+                <ul>
+                    <li><strong>Ley 24/2013, de 26 de diciembre,</strong> del Sector Eléctrico</li>
+                    <li><strong>Ley 34/1998, de 7 de octubre,</strong> del Sector de Hidrocarburos</li>
+                    <li><strong>Real Decreto 1955/2000,</strong> regulador de actividades de gas natural</li>
+                    <li><strong>Código Civil español</strong></li>
+                    <li><strong>Ley General para la Defensa de Consumidores y Usuarios</strong></li>
+                    <li><strong>Normativa de la CNMC</strong></li>
+                </ul>
+
+                <h3>12.2 Resolución de Conflictos</h3>
+                <div class="highlight-box">
+                    <p><strong>⚖️ Jurisdicción competente:</strong></p>
+                    <ol>
+                        <li><strong>Mediación:</strong> Intentaremos resolver amistosamente cualquier conflicto</li>
+                        <li><strong>Arbitraje de consumo:</strong> Sometimiento al Sistema Arbitral de Consumo</li>
+                        <li><strong>Jurisdicción ordinaria:</strong> Juzgados y Tribunales de Albacete</li>
+                        <li><strong>Fuero del consumidor:</strong> Respeto al fuero del domicilio del consumidor</li>
+                    </ol>
+                </div>
+
+                <h2>13. Disposiciones Finales</h2>
+                
+                <h3>13.1 Nulidad Parcial</h3>
+                <p>Si alguna cláusula de estos términos fuera declarada nula o ineficaz por resolución firme, las restantes disposiciones continuarán vigentes sin que queden afectadas por dicha declaración de nulidad.</p>
+
+                <h3>13.2 Prevalencia Contractual</h3>
+                <p>En caso de discrepancia entre estos términos generales y las condiciones particulares del contrato, prevalecerán estas últimas.</p>
+
+                <h3>13.3 Integridad del Acuerdo</h3>
+                <p>Estos términos y condiciones, junto con las condiciones particulares del contrato, constituyen el acuerdo completo entre las partes y sustituyen cualquier acuerdo anterior sobre la misma materia.</p>
+
+                <h2>14. Información Adicional</h2>
+                
+                <h3>14.1 Sostenibilidad y Medio Ambiente</h3>
+                <div class="success-box">
+                    <p><strong>🌱 Compromiso medioambiental:</strong></p>
+                    <ul>
+                        <li>Energía 100% renovable con garantía de origen</li>
+                        <li>Contribución a la reducción de emisiones de CO₂</li>
+                        <li>Promoción del uso eficiente de la energía</li>
+                        <li>Apoyo a proyectos de energías renovables</li>
+                    </ul>
+                </div>
+
+                <h3>14.2 Innovación y Tecnología</h3>
+                <p>Nos comprometemos a incorporar las últimas innovaciones tecnológicas para mejorar nuestros servicios:</p>
+                <ul>
+                    <li>Plataformas digitales de gestión</li>
+                    <li>Aplicaciones móviles para clientes</li>
+                    <li>Sistemas de monitorización en tiempo real</li>
+                    <li>Herramientas de eficiencia energética</li>
+                </ul>
+
+                <h2>15. Contacto y Consultas</h2>
+                <p>Para cualquier consulta, aclaración o sugerencia sobre estos Términos y Condiciones:</p>
+                
+                <div class="company-info">
+                    <h3>📞 Departamento Legal y Atención al Cliente</h3>
+                    <p><strong>📧 Email:</strong> info@wasabitrader.com</p>
+                    <p><strong>📞 Teléfono:</strong> +34 621 50 83 00</p>
+                    <p><strong>📮 Dirección:</strong> POLÍGONO CAMPOLLANO - CALLE A, 7. 02006, ALBACETE (ALBACETE), ESPAÑA</p>
+                    <p><strong>🕐 Horario:</strong> Lunes a Viernes, 9:00 - 18:00</p>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="/">← Volver a la web principal</a>
+                    <a href="/politica-privacidad.html">Política de Privacidad</a>
+                    <a href="/aviso-legal.html">Aviso Legal</a>
+                    <a href="/cookies.html">Política de Cookies</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
