@@ -25,7 +25,7 @@ const OptimizedHero = () => {
           <div className={`mb-12 transform transition-all duration-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="relative inline-block group">
               
-              <div className="relative bg-white p-16 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-700 hover:scale-105 overflow-hidden transform-gpu border-4 border-[#A8FF00]">
+              <div className="relative bg-white p-16 rounded-3xl shadow-[0_0_40px_rgba(168,255,0,0.4)] hover:shadow-[0_0_60px_rgba(168,255,0,0.6)] transition-all duration-700 hover:scale-105 overflow-hidden transform-gpu border-4 border-[#A8FF00]">
                 
                 {/* Efecto de brillo al hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#A8FF00]/30 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[300%] transition-transform duration-1000 ease-out"></div>
@@ -53,17 +53,21 @@ const OptimizedHero = () => {
                     style={{
                       maxWidth: '400px',
                       objectFit: 'contain',
-                      filter: 'contrast(2.0) brightness(1.4) saturate(1.6) drop-shadow(0 8px 20px rgba(0,0,0,0.2))'
+                      filter: 'contrast(2.2) brightness(1.0) saturate(2.0) drop-shadow(0 8px 25px rgba(168,255,0,0.4))'
                     }}
                   />
                 </div>
                 
                 {/* Borde animado */}
-                <div className="absolute inset-0 rounded-3xl border-4 border-[#A8FF00] opacity-100 group-hover:border-[#96E600] transition-all duration-500"></div>
+                <div className="absolute inset-0 rounded-3xl border-4 border-[#A8FF00] opacity-100 group-hover:border-[#96E600] transition-all duration-500 animate-pulse"></div>
+
+                {/* Fondo verde sutil interior */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#A8FF00]/5 via-transparent to-[#A8FF00]/5 rounded-3xl"></div>
               </div>
               
-              {/* Resplandor exterior sutil */}
-              <div className="absolute -inset-8 bg-[#A8FF00]/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+              {/* Resplandor exterior */}
+              <div className="absolute -inset-4 bg-[#A8FF00]/20 rounded-[2rem] blur-2xl -z-10"></div>
+              <div className="absolute -inset-8 bg-[#A8FF00]/10 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-700 -z-10"></div>
             </div>
           </div>
 
@@ -107,7 +111,7 @@ const OptimizedHero = () => {
                 <div className={`p-2 rounded-lg bg-gradient-to-r ${benefit.color} group-hover:scale-125 transition-transform duration-300`}>
                   <benefit.icon className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-[#1A1A1A] font-semibold group-hover:text-[#1A1A1A] transition-colors">
+                <span className="text-[#1A1A1A] font-semibold">
                   {benefit.text}
                 </span>
               </div>
@@ -132,7 +136,7 @@ const OptimizedHero = () => {
               {["Sin compromiso", "Sin letra pequeña", "Atención humana"].map((text, index) => (
                 <span 
                   key={index}
-                  className="relative px-4 py-2 rounded-full bg-white border border-gray-200 hover:border-[#A8FF00]/50 hover:text-[#1A1A1A] transition-all duration-300 hover:scale-105 shadow-sm"
+                  className="px-4 py-2 rounded-full bg-white border border-gray-200 hover:border-[#A8FF00]/50 hover:text-[#1A1A1A] transition-all duration-300 hover:scale-105 shadow-sm"
                 >
                   {text}
                 </span>
