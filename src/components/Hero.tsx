@@ -2,14 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight, TrendingDown, Shield, Heart, Zap } from 'lucide-react';
 
 const Hero = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isVisible, setIsVisible] = useState(false);
   const [energyParticles, setEnergyParticles] = useState<Array<{id: number, x: number, y: number, delay: number}>>([]);
 
   useEffect(() => {
     setIsVisible(true);
     
-    // Generate energy particles
     const particles = Array.from({ length: 20 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
@@ -17,16 +15,6 @@ const Hero = () => {
       delay: Math.random() * 2
     }));
     setEnergyParticles(particles);
-
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth) * 100,
-        y: (e.clientY / window.innerHeight) * 100
-      });
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   const scrollToContacto = () => {
@@ -38,11 +26,11 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Dynamic Gradient Background */}
+      {/* Static Gradient Background */}
       <div 
-        className="absolute inset-0 transition-all duration-1000 ease-out"
+        className="absolute inset-0"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, 
+          background: `radial-gradient(circle at 50% 50%, 
             rgba(168, 255, 0, 0.15) 0%, 
             rgba(26, 26, 26, 0.95) 40%, 
             rgba(26, 26, 26, 1) 100%)`
@@ -96,7 +84,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Main Headline with Typewriter Effect */}
+          {/* Main Headline */}
           <h1 className={`text-4xl sm:text-6xl lg:text-8xl font-black text-white mb-8 leading-tight transform transition-all duration-2000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             ¿Pagas la luz sin saber{' '}
             <span className="relative inline-block">
@@ -109,7 +97,7 @@ const Hero = () => {
             <span className="text-6xl">?</span>
           </h1>
 
-          {/* Subtitle with Stagger Animation */}
+          {/* Subtitle */}
           <div className={`text-xl sm:text-3xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto transform transition-all duration-2000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <p className="mb-4">
               Bienvenido a <strong className="text-[#A8FF00] font-black text-4xl bg-gradient-to-r from-[#A8FF00] to-[#96E600] bg-clip-text text-transparent">Energía Verde Wasabi</strong>
@@ -124,7 +112,7 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Animated Key Benefits */}
+          {/* Key Benefits */}
           <div className={`flex flex-wrap justify-center gap-6 sm:gap-8 mb-12 transform transition-all duration-2000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {[
               { icon: Shield, text: "Sin permanencia", color: "text-green-400" },
@@ -142,25 +130,20 @@ const Hero = () => {
             ))}
           </div>
 
-          {/* Epic CTA Button */}
+          {/* CTA Button */}
           <div className={`transform transition-all duration-2000 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <button
               onClick={scrollToContacto}
               className="group relative inline-flex items-center space-x-3 bg-gradient-to-r from-[#A8FF00] to-[#96E600] text-[#1A1A1A] px-12 py-6 rounded-full text-2xl font-black hover:from-[#96E600] hover:to-[#A8FF00] transition-all duration-500 transform hover:scale-110 hover:shadow-2xl overflow-hidden"
             >
-              {/* Button Background Animation */}
               <div className="absolute inset-0 bg-gradient-to-r from-[#A8FF00] to-[#96E600] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              
-              {/* Button Content */}
               <span className="relative z-10 text-2xl">👉 Quiero pagar lo justo</span>
               <ArrowRight className="relative z-10 h-8 w-8 transition-transform group-hover:translate-x-2 group-hover:scale-125" />
-              
-              {/* Ripple Effect */}
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 group-hover:animate-ping rounded-full"></div>
             </button>
           </div>
 
-          {/* Trust Indicators with Pulse Animation */}
+          {/* Trust Indicators */}
           <div className={`mt-8 transform transition-all duration-2000 delay-1200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="flex flex-wrap justify-center gap-8 text-gray-400 text-lg">
               {["Sin compromiso", "Sin letra pequeña", "Atención humana"].map((text, index) => (
@@ -177,7 +160,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Animated Scroll Indicator */}
+      {/* Scroll Indicator */}
       <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-2000 delay-1500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
         <div className="relative">
           <div className="w-8 h-14 border-2 border-[#A8FF00] rounded-full flex justify-center animate-bounce">
