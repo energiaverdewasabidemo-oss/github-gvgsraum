@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, Shield, Leaf, TrendingDown, Award, Zap, Sparkles, Star } from 'lucide-react';
+import { ArrowRight, Shield, Leaf, TrendingDown, Award } from 'lucide-react';
 
 const OptimizedHero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -29,20 +29,6 @@ const OptimizedHero = () => {
                 
                 {/* Efecto de brillo al hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#A8FF00]/30 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[300%] transition-transform duration-1000 ease-out"></div>
-                
-                {/* Rayos en esquinas al hover */}
-                <div className="absolute -top-4 -left-4 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 animate-bounce">
-                  <Zap className="h-8 w-8 text-[#A8FF00]" />
-                </div>
-                <div className="absolute -top-4 -right-4 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 animate-bounce" style={{animationDelay: '0.2s'}}>
-                  <Sparkles className="h-8 w-8 text-[#A8FF00]" />
-                </div>
-                <div className="absolute -bottom-4 -left-4 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 animate-bounce" style={{animationDelay: '0.4s'}}>
-                  <Star className="h-8 w-8 text-[#A8FF00]" />
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-8 h-8 opacity-0 group-hover:opacity-100 transition-all duration-500 animate-bounce" style={{animationDelay: '0.6s'}}>
-                  <Zap className="h-8 w-8 text-[#A8FF00]" />
-                </div>
                 
                 {/* Logo */}
                 <div className="relative z-10 transform group-hover:scale-105 transition-transform duration-500">
